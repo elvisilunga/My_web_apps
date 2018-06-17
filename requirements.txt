@@ -6,4 +6,3 @@ uwsgi
 pandas
 jsonify
 request
-statsmodels.api
