@@ -5,7 +5,5 @@ Flask-SQLAlchemy
 uwsgi
 pandas
 jsonify
-abort
-make_response
 request
 statsmodels.api
