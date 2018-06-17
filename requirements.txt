@@ -3,10 +3,10 @@ Flask-RESTful
 Flask-JWT
 Flask-SQLAlchemy
 uwsgi
-pandas as pd
+pandas
 json
 jsonify
 abort
 make_response
 request
-statsmodels.api as sm
+statsmodels.api
