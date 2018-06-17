@@ -1,0 +1,12 @@
+Flask
+Flask-RESTful
+Flask-JWT
+Flask-SQLAlchemy
+uwsgi
+pandas as pd
+json
+jsonify
+abort
+make_response
+request
+statsmodels.api as sm
