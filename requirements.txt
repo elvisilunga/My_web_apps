@@ -4,7 +4,6 @@ Flask-JWT
 Flask-SQLAlchemy
 uwsgi
 pandas
-json
 jsonify
 abort
 make_response
