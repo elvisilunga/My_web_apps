@@ -28,7 +28,7 @@ tasks = [
     }
 ]
 
-@app.route('https://myscore-.herokuapp.com/<int:task_id>', methods=['GET'])
+@app.route('/Flask_tutorial/api/v1.0/tasks/<int:task_id>', methods=['GET'])
 def get_task(task_id):
     task = [task for task in tasks if task['id'] == task_id]
     if len(task) == 0:
@@ -40,7 +40,7 @@ def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
 
 
-@app.route('https://myscore-.herokuapp.com', methods=['POST'])
+@app.route('/Flask_tutorial/api/v1.0/tasks', methods=['POST'])
 def create_task():
     if not request.json or not 'title' in request.json:
         abort(400)
@@ -54,7 +54,7 @@ def create_task():
     return jsonify({'task': task}), 201
 
 
-@app.route('https://myscore-.herokuapp.com/<int:task_id>', methods=['PUT'])
+@app.route('/Flask_tutorial/api/v1.0/tasks/<int:task_id>', methods=['PUT'])
 def update_task(task_id):
     task = [task for task in tasks if task['id'] == task_id]
     if len(task) == 0:
@@ -73,7 +73,7 @@ def update_task(task_id):
     return jsonify({'task': task[0]})
 
 
-@app.route('https://myscore-.herokuapp.com/<int:task_id>', methods=['DELETE'])
+@app.route('/Flask_tutorial/api/v1.0/tasks/<int:task_id>', methods=['DELETE'])
 def delete_task(task_id):
     task = [task for task in tasks if task['id'] == task_id]
     if len(task) == 0:
@@ -92,7 +92,7 @@ def make_public_task(task):
     return new_task
 
 ##Note the difference between the two methods: get_task and get_tasks
-@app.route('https://myscore-.herokuapp.com', methods=['GET'])
+@app.route('/todo/api/v1.0/tasks', methods=['GET'])
 def get_tasks():
     return jsonify({'tasks': [make_public_task(task) for task in tasks]})
 
