@@ -47,7 +47,7 @@ def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
 
 
-@app.route('/https://myscore-.herokuapp.com/', methods=['POST'])
+@app.route('/https://myscore-.herokuapp.com', methods=['POST'])
 def create_task():
     if not request.json or not 'title' in request.json:
         abort(400)
@@ -99,7 +99,7 @@ def make_public_task(task):
     return new_task
 
 ##Note the difference between the two methods: get_task and get_tasks
-@app.route('/https://myscore-.herokuapp.com/', methods=['GET'])
+@app.route('/https://myscore-.herokuapp.com', methods=['GET'])
 def get_tasks():
     return jsonify({'tasks': [make_public_task(task) for task in tasks]})
 
