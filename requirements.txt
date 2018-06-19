@@ -2,6 +2,7 @@ Flask
 Flask-RESTful
 Flask-JWT
 Flask-SQLAlchemy
+gunicorn
 uwsgi
 pandas
 jsonify
